@@ -1,0 +1,82 @@
+/* body{
+    background-color: #008000;
+    color:#fff;
+
+} */
+.green{
+    width: 25px;
+    height: 25px;
+    background-color: #008000;
+    border-radius: 35px;
+    border: 1px solid #008000;
+}
+.red{
+    
+    width: 25px;
+    height: 25px;
+    background-color: #e12424;
+    border-radius: 35px;
+    border: 1px solid #e12424;
+}
+.blue{
+    
+    width: 25px;
+    height: 25px;
+    background-color: #1E90FF;
+    border-radius: 35px;
+    border: 1px solid #1E90FF;
+}
+.purple{
+    width: 25px;
+    height: 25px;
+    background-color: #8B008B;
+    border-radius: 35px;
+    border: 1px solid #8B008B;
+}
+.yellow{
+    width: 25px;
+    height: 25px;
+    background-color: #FFEA00;
+    border-radius: 35px;
+    border: 1px solid #FFEA00;
+}
+.light-theme{
+    background-color: #fff;
+    color:#000;
+   
+}
+.dark-theme{
+    background-color: #000;
+    color:#fff;
+   
+}
+.green-theme{
+    background-color: #09740a;
+    color:#fff;
+    border-color: #09740a;
+}
+
+.red-theme{
+    background-color: #bb0d0d;
+    color:#fff;
+    border-color: #bb0d0d;
+}
+
+.blue-theme{
+    background-color: #0b6dcd;
+    color:#fff;
+    border-color: #0b6dcd;
+}
+
+.purple-theme{
+    background-color: #af14af;
+    color:#fff;
+    border-color: #af14af;
+}
+
+.yellow-theme{
+    background-color: #e5d30d;
+    color:#000;
+    border-color: #e5d30d;
+}
+
