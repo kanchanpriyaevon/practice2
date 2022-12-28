@@ -5,11 +5,11 @@ import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 import About from './components/About';
 import React,{useState} from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Routes,
+// } from "react-router-dom";
 function App() {
 
   const [mode, setMode] = useState('light');
@@ -25,7 +25,17 @@ function App() {
       setAlert(null)
     },1000)
   }
+  const bgRemoveClass = () =>{
+    document.body.classList.remove('bg-light');
+    document.body.classList.remove('bg-dark');
+    document.body.classList.remove('green-theme');
+    document.body.classList.remove('red-theme');
+    document.body.classList.remove('blue-theme');
+    document.body.classList.remove('purple-theme');
+    document.body.classList.remove('yellow-theme');
+  }
   const toggleMode = () => {
+    bgRemoveClass();
     if(mode === 'light'){
       setMode('dark');
       document.body.style.backgroundColor = 'black';
@@ -41,8 +51,11 @@ function App() {
 
     }
   }
+
+  
   const themeMode = (color) =>{
-    console.log(color)
+    bgRemoveClass();
+    // console.log(color)
     // setTheme(color);
     if(color==='green'){
       document.body.style.backgroundColor = '#008000';
@@ -74,14 +87,16 @@ function App() {
   }
   return (
    <>
-    <Router>
+    {/* <Router> */}
       <Navbar title="TextUtils" about="About" mode={mode} toggleMode={toggleMode} theme={theme} themeMode={themeMode}/>
       <Alert alert={alert}/>
-          <Routes>
-              <Route exact path ="/" element={<TextForm heading="Enter The Text Here" mode={mode} theme={theme} showAlert={showAlert} />} />
-              <Route exact path ="/about" element={<About />} />
-          </Routes>
-   </Router>
+          {/* <Routes> */}
+              {/* <Route exact path ="/" element={<TextForm heading="Enter The Text Here" mode={mode} theme={theme} showAlert={showAlert} />} /> */}
+              <TextForm heading="Enter The Text Here" mode={mode} theme={theme} showAlert={showAlert} />
+             <About />
+              {/* <Route exact path ="/about" element={<About />} /> */}
+          {/* </Routes> */}
+   {/* </Router> */}
    
    </>
   );
